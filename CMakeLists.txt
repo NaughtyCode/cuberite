@@ -114,7 +114,7 @@ set(SELF_TEST OFF CACHE BOOL "")
 # Check whether Lua 5.1 can be used:
 if (NOT(DISABLE_SYSTEM_LUA))
 	include(CheckLua.cmake)
-	if(HAS_LUA_INTERPRETER AND ("${LUA_INTERPRETER_VERSION}" STREQUAL "5.1"))
+	if(HAS_LUA_INTERPRETER)
 		message(STATUS "Lua 5.1 has been found in your system and will be used for the build.")
 		set(USE_SYSTEM_LUA 1)
 	else()
